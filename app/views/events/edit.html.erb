@@ -1,6 +1,6 @@
-<h1>テスト</h1>
+<h1>編集</h1>
 
-<%= form_with model: @event do |f| %>
+<%= form_with model: @event, url:event_path(@event.id), method: :patch do |f| %>
 
   <div class="title">
     <%= f.label :title %>
@@ -18,7 +18,7 @@
   </div>
 
 
-  <div class="submit">
+  <div class="update">
     <%= f.submit %>
   </div>
 
