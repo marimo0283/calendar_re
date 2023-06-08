@@ -1,0 +1,13 @@
+<%= month_calendar events: @foods do |date, foods| %>
+  <%= date.day %>
+
+  <% foods.each do |food| %>
+    <div>
+      <%= link_to food_path(food.id) do %>
+        <%= food.morning %>
+       <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to '追加', new_food_path, class: "mx-6" %>

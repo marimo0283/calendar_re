@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_03_074436) do
+ActiveRecord::Schema.define(version: 2023_06_08_100643) do
 
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
+  create_table "foods", force: :cascade do |t|
+    t.string "morning"
+    t.string "noon"
+    t.string "night"
+    t.text "memo"
     t.datetime "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

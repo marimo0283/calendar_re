@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+      <p><%= @food.start_time %></p>
+    </div>
+    <div class="row">
+      <h5>朝食</h5>
+      <p><%= @food.morning %></p>
+    </div>
+    <div class="row">
+      <h5>昼食</h5>
+      <p><%= @food.noon %></p>
+    </div>
+    <div class="row">
+      <h5>夕食</h5>
+      <p><%= @food.night %></p>
+    </div>
+    <div class="row">
+      <h5>メモ</h5>
+      <p><%= @food.memo %></p>
+    </div>
+
+
+
+    <div class="row">
+      <%= link_to '編集', edit_food_path(@food.id), class: "btn btn-outline-success mr-1"  %>
+      <%= link_to '削除', food_path(@food), method: :delete, data: {confirm: "本当に削除しますか？"}, class: "btn btn-outline-success mr-1"  %>
+      <%= link_to '戻る', root_path, class: "btn btn-outline-success"  %>
+    </div>
+
+</div>

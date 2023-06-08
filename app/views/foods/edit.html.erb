@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row my-3">
+    <h3>編集</h3>
+  </div>
+  <div class="row my-3">
+    <% if @food.errors.any? %>
+      <%= @food.errors.count %>件のエラーが発生しました
+      <ul>
+        <% @food.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <%= form_with model: @food, method: :patch do |f| %>
+
+    <div class="time mb-1">
+      <%= f.datetime_select :start_time %>
+    </div>
+
+    <div class="title mb-1">
+      <%= f.text_field :morning, placeholder: "朝食" %>
+    </div>
+
+    <div class="content mb-1">
+      <%= f.text_field :noon, placeholder: "昼食" %>
+    </div>
+
+    <div class="content mb-1">
+      <%= f.text_field :night, placeholder: "夕食" %>
+    </div>
+
+    <div class="content mb-1">
+      <%= f.text_area :memo, placeholder: "メモ" %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit "追加", class: "btn btn-outline-success" %>
+    </div>
+
+    <% end %>
+  </div>
+</div>
