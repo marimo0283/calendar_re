@@ -4,8 +4,8 @@
   <% foods.each do |food| %>
     <div>
       <%= link_to food_path(food.id) do %>
-        <%= food.morning %>
-       <% end %>
+        <i class="fa-solid fa-utensils"></i>
+      <% end %>
     </div>
   <% end %>
 <% end %>
