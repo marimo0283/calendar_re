@@ -1,8 +1,11 @@
 <div class="simple-calendar">
-  <div class="calendar-heading">
+  <div class="calendar-heading my-3">
     <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
     <span class="calendar-title"><%= start_date.year %>年  <%= t('date.month_names')[start_date.month] %></span>
     <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
+    <%= link_to new_food_path, class: "ml-2" do %>
+      <i class="fa-regular fa-square-plus"></i>
+    <% end %>
   </div>
 
   <table class="table table-striped">

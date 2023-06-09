@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row my-3">
-    <h3>追加</h3>
+    <h3 class="border-success border-bottom">追加</h3>
   </div>
   <div class="row my-3">
     <% if @food.errors.any? %>
@@ -16,23 +16,23 @@
   <div class="row">
     <%= form_with model: @food, url: foods_path do |f| %>
 
-    <div class="time mb-1">
-      <%= f.datetime_select :start_time %>
+    <div class="time mb-2">
+      <%= f.date_select :start_time %>
     </div>
 
-    <div class="title mb-1">
+    <div class="title mb-2">
       <%= f.text_field :morning, placeholder: "朝食" %>
     </div>
 
-    <div class="content mb-1">
+    <div class="content mb-2">
       <%= f.text_field :noon, placeholder: "昼食" %>
     </div>
 
-    <div class="content mb-1">
+    <div class="content mb-2">
       <%= f.text_field :night, placeholder: "夕食" %>
     </div>
 
-    <div class="content mb-1">
+    <div class="content mb-3">
       <%= f.text_area :memo, placeholder: "メモ" %>
     </div>
 

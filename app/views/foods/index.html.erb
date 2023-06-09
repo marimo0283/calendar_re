@@ -1,13 +1,15 @@
-<%= month_calendar events: @foods do |date, foods| %>
-  <%= date.day %>
+<div class="container">
+  <div class="row my-1 mx-1">
+    <%= month_calendar events: @foods do |date, foods| %>
+      <%= date.day %>
 
-  <% foods.each do |food| %>
-    <div>
-      <%= link_to food_path(food.id) do %>
-        <i class="fa-solid fa-utensils"></i>
+      <% foods.each do |food| %>
+        <div>
+          <%= link_to food_path(food.id) do %>
+            <i class="fa-solid fa-utensils"></i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
-  <% end %>
-<% end %>
-
-<%= link_to '追加', new_food_path, class: "mx-6" %>
+    <% end %>
+  </div>
+</div>
