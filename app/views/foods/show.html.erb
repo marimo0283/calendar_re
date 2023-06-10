@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row my-3 mx-3">
-      <h5 class="border-success border-bottom"><%= @food.start_time %></h5>
+      <h5 class="border-success border-bottom"><%= @food.start_time.strftime("%Y年%m月%d日") %></h5>
     </div>
     <div class="row">
       <table>
