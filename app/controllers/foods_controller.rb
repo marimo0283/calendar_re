@@ -27,7 +27,7 @@ class FoodsController < ApplicationController
   def update
     @food = Food.find(params[:id])
     if @food.update(food_params)
-      redirect_to root_path
+      redirect_to food_path(@food)
     else
       render :edit
     end
