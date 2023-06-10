@@ -2,3 +2,9 @@ ja:
   simple_calendar:
     previous: "<<"
     next: ">>"
+  activerecord:
+    attributes:
+      food:
+       morning: 朝食
+       noon: 昼食
+       night: 夕食
