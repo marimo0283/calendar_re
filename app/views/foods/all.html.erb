@@ -7,6 +7,8 @@
         <th>昼食</th>
         <th>夕食</th>
         <th>メモ</th>
+        <th></th>
+        <th></th>
       </tr>
       <% @foods.each do |food| %>
       <tr>
@@ -14,7 +16,9 @@
         <td class="pr-3 pb-1"><%= food.morning %></td>
         <td class="pr-3 pb-1"><%= food.noon %></td>
         <td class="pr-3 pb-1"><%= food.night %></td>
-        <td><%= food.memo %></td>
+        <td class="pr-3 pb-1"><%= food.memo %></td>
+        <td><%= link_to '編集', edit_food_path(food.id), class: "btn btn-outline-success pr-3" %></td>
+        <td><%= link_to '削除', food_path(food), method: :delete, data: {confirm: "本当に削除しますか？"}, class: "btn btn-outline-success"  %></td>
       </tr>
       <% end %>
     </table>
