@@ -39,6 +39,10 @@ class FoodsController < ApplicationController
     redirect_to root_path
   end
 
+  def all
+    @foods = Food.all
+  end
+
   private
 
   def food_params
