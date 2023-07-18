@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row mt-4">
     <table>
       <tr>
         <th>日付</th>
@@ -17,10 +17,13 @@
         <td class="pr-3 pb-1"><%= food.noon %></td>
         <td class="pr-3 pb-1"><%= food.night %></td>
         <td class="pr-3 pb-1"><%= food.memo %></td>
-        <td><%= link_to '編集', edit_food_path(food.id), class: "btn btn-outline-success pr-3" %></td>
+        <td><%= link_to '編集', edit_food_path(food.id), class: "btn btn-outline-success mx-3" %></td>
         <td><%= link_to '削除', food_path(food), method: :delete, data: {confirm: "本当に削除しますか？"}, class: "btn btn-outline-success"  %></td>
       </tr>
       <% end %>
     </table>
-    </div>
+  </div>
+  <div class="row mt-3">
+    <%= link_to 'カレンダーに戻る', foods_path, class: "btn btn-outline-success" %>
+  </div>
 </div>
